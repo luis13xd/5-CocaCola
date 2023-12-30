@@ -1,0 +1,467 @@
+*{
+	box-sizing: border-box; /*para hacer que el tamaño de los elementos no crescan mas hacia los lados de lo normal y respete los bordes de la caja*/
+}
+
+body{
+	font-family: "Roboto";
+}
+
+a{/*toma todos los elementos con la etiqueta a*/
+	display:inline-block;/*para que queden alineados y en bloque y poder darle un alto y que lo respete*/
+	text-decoration: none; /*quita las lineas del a*/
+}
+
+p{
+	color: black;
+}
+
+header{
+	padding: 15px 0; /*es un espacio hacia adentro o por dentro no como margin por fuera,y tambien se maneja asi 15px 0 15px 0 , donde 15 son arriba y abajo y 0 los lados, acuerdece que se inicia como las manecillas del reloj asi, arriba derecha abajo izquierda*/
+	position: fixed; /*se usa para dejar fijo en toda la pagina este elemento osea el menu*/
+	top: 0; /*para que el menu quede siempre pegado en la parte de encima y no tenga espacios o margenes*/
+	width: 100%;/*para que ocupe todo el ancho de la pagina*/
+	left: 0; /*para que este pegado el menu a la parte izquierda de la pagina y no halla espacios o bordes*/
+	z-index: 2; /*todos los elementos se encuentran en una misma capa, con z index se pone el elemente como capa primordial y hace que se muestre el menu, siempre esta en 0 y por eso no se muestra, en 1 o mas se muestra*/
+	background-color: white; /*color de fondo blanco*/
+}
+
+header .container{ /*usamos el bloque header  el container que esta dentro del header*/
+	display: flex; ; /*display cambia el comportamiento de un elemento, block es tipo bloque osea que los elementos no van a estar en linea uno debajo del otro,inline pues en linea de izquierda a derecha y no respeta el alto de los elementos sino que solo pone los elementos,inline-block que es los  dos a la vez osea en bloque pero en la misma linea respetando el alto de los elementos, flex loq ue hace es acomodar a tdos los elementos que estan dentro del bloque en el espacio que hay*/
+	justify-content: space-between; /*alinea los elementos en eje x osea horizontalmente, space-between acomoda elementos en el espacio que hay osea si hay 2 elementos pone uno a la izquierda y el otro a la derecha y el espacio etre cada elemento es el mismo*/
+	align-items: center;/*alinea los elementos en eje y osea verticalmente, center los centra de arriba a abajo,*/
+
+}
+
+header .container .logo{/*aqui solo el elemento llammado con la clase logo que esta dentro del elemento container y que estos estan dentro de container toman los estilos, los demas que esten por fuera no*/
+	width: 100px; /*se le da un ancho en pixeles*/
+}
+
+header .container nav a{
+	color: red; /*se le da el color a "a de rojo*/
+	text-decoration: none; /*none es para quitarle la linea del texto,si quisieramos ponersela seria con underline*/
+	margin: 0 15px;/*se usa para darle espacio y separarlos , este espacio es externo, hacia afuera o por fuera. sen puede poner 0 15 0 15 tambien donde los 0 son arriba y abajo y los 15 a los lados*/
+}
+
+	header .container .hamb{ /*boton para mobile no cisible en escritorio*/
+		display: none;
+		position: relative;
+	}
+
+footer.seccion{
+	background-color: black;
+	color: white;
+	padding-bottom: 0;
+}
+
+footer .barra-footer{
+	background-color: grey;
+	text-align: center;
+	padding-right: 15px;
+	padding-left: 15px;
+	padding: 15px 0 15px 0;
+}
+
+footer .logo-footer{
+	width: 100%;
+	padding-top: 20px;
+}
+
+footer p{
+	color: white;
+	margin-bottom: 30px;
+}
+
+footer ul{
+	padding-left: 0;
+	list-style: none;
+	margin: 0;
+}
+
+footer ul li{
+	margin-bottom: 15px;
+}
+
+footer .redes{
+	font-size: 25px;
+	display: flex; /*para que los elementos esten alineados y respeten la altura*/
+}
+
+footer .redes a{
+	margin: 0 7.5px; /*margen soolo a los lados*/
+} 
+
+.boton{
+	text-align: center; /*centramos textoen el boton*/
+	text-decoration: none; /*quitamos la linea de decoracion del a*/
+	padding: 15px 25px;/*espacio hacia arriba y abajo y los lados */
+	border:none;
+}
+
+.boton.boton-rojo{   /*asi hace referencia tanto al boton como el boton rojo asi pegado sin espacios y unidos con el punto*/
+	color: white; /*color a la letra*/ 
+	background-color: red; /*color al fondo*/
+	font-size: 20px; /*tamaño de la fuente o letra*/
+	font-weight: bold; /*determina el grosor de la letra, bold es grueso*/
+}
+
+.boton.boton-rojo:hover{   /*asi hace referencia tanto al boton como el boton rojo asi pegado sin espacios y unidos con el punto*/
+	color: red; /*color a la letra*/ 
+	background-color: white; /*color al fondo*/
+}
+
+
+.boton.boton-blanco{   /*asi hace referencia tanto al boton como el boton rojo asi pegado sin espacios y unidos con el punto*/
+	color: red; /*color a la letra*/ 
+	background-color: white; /*color al fondo*/
+	font-size: 16px; /*tamaño de la fuente o letra*/
+	font-weight: bold; /*determina el grosor de la letra, bold es grueso*/
+	border:1px solid red;
+}
+
+.boton.boton-blanco:hover{   /*asi hace referencia tanto al boton como el boton rojo asi pegado sin espacios y unidos con el punto*/
+	color: white; /*color a la letra*/ 
+	background-color: red; /*color al fondo*/
+}
+
+.boton.boton-negro{   /*asi hace referencia tanto al boton como el boton rojo asi pegado sin espacios y unidos con el punto*/
+	color: white; /*color a la letra*/ 
+	background-color: black; /*color al fondo*/
+	font-size: 20px; /*tamaño de la fuente o letra*/
+	font-weight: bold; /*determina el grosor de la letra, bold es grueso*/
+}
+
+.boton.boton-negro:hover{ /*hover se usa para cuando se ponga el pulsor o mouse sobre el elemento pase algo, aca le vamos a cambiar el colors*/
+	color: black; /*color a la letra*/ 
+	background-color: white; /*color al fondo*/
+}
+
+
+
+.container{
+	width: 1140px;/*da un ancho fijo a todos los elementos con esta clase container*/
+	margin: 0 auto; /*da margen al container 0 da a arriba y a abajo que son los mismos buton y top y el auto toma el left y right osea el de los lados tambien esto sepodia poner asi 0 auto 0 auto donde se inicia con 0 arriba auto  a la derecha cero abajo y auto a la izquierda siempre */
+	padding-right: 15px; /*espacio interno a la derecha*/ 
+	padding-left: 15px; /*espacio interno a la izquierda*/ 
+	position: relative; /*para que el div padre ocupe un espacio y el absolute lo ocupe*/
+}
+
+.container-fluid{
+	width: 100%; /*usa todo el ancho del div*/
+	padding-right: 15px; /*espacio interno a la derecha*/ 
+	padding-left: 15px; /*espacio interno a la izquierda*/ 
+	position: relative;
+}
+
+.seccion{
+	padding-top: 60px; /*espacio interno de arriba*/
+	padding-bottom: 60px; /*espacio interno de abajo*/
+
+}
+
+.cuadrado-perfecto{
+	width: 100%;  /*ancho del div cp*/
+	padding-bottom: 100%; /*espacio interno de abajo*/
+	position: relative; /*se usa para fijar el espacio como padre y que la imagen se pueda poner aca despues agregandole el absolute*/
+}
+
+.cuadrado-perfecto img{
+	width: 100%; /*cubre todo el ancho la img*/
+	height: 100%; /*cobre la altura de la img ya que la definimos antes*/
+	object-fit: cover; /*se usa solo para etiquetas lineales img y se usa para ocupar todo el espacio*/
+	object-position: center; /*se usa para centrar imagenes o videos asi como el text alingcenter*/
+	position: absolute; /*para que la imagen no ocupe un espacio y se acomode */
+	top: 0; /*pegamos la imagen a la parte de arriba*/
+	left: 0; /*pegamos la imagen a la parte izquierda*/
+	}
+
+.row{
+	display: flex; /*acomoda los elementos en el espacio que hay de izquierda a derecha*/
+	flex-wrap: wrap;; /*indica que los elementos pueden hacer un cambio de linea o no, el valor por defecto es nowrap y mantiene los elementos en una sola linea, wrap hace que se de el salto de linea hacia abajo cuando encima ya no halla espacio, y wrap-reverse hace tambien el salto de linea pero al contrario de abajo hacia arriba*/
+	margin-left: -15px; /*le restamos margen por fuera a la izquierda*/
+	margin-right: -15px; /*le restamos margen por fuera a la derecha*/
+}
+
+.columna{ /*todo lo relacionado en columnas va en porcentajes */
+	padding-right: 15px; /*espacio por dentro de mas en derecha */
+	padding-left: 15px; /*espacio por dentro de mas a la izquierda*/
+	
+}
+
+.columna-25{
+	width: 25%;
+}
+
+.columna-33{
+	width: 33.33%; /*ancho de las columnas en 33%*/
+}
+
+.columna-50{
+	width: 50%;
+}
+
+.columna-40{
+	width: 40%;
+}
+
+
+.empujar-50{
+	margin-left: 50%;
+}
+
+.empujar-60{
+	margin-left: 30%;
+}
+
+.empujar-70{
+	margin-left: 30%;
+}
+
+.empujar-0{
+	margin-left: 0;
+}
+
+#inicio{
+	position: relative;/*5 posiciones existen, static que es la que vienen por defecto todos los elementos, al poner relative y despues usar un top bottom left right y z-indez lo podemos mover, relative y absolute son lo mismo en casi todo la cuestion es que relative se usa para el padre y absolute para el hijo osea el padre es la caja grande y el hijo va dentro de la caja grande pero con relative se conserva el espacio inicial y con absolute ya queda la caja flotando y los demas elementos se comodan como si ya no estuviera estee, y fixed es para dejar un elemento fijo en la pantalla asi nos estemos dezplazando, y sticky sirve para fijar un elemento como fixed pero este se puede limitar, es decir se mueve por pedazos nomas mas no esta siempre en toda la pantalla*/
+}
+
+#inicio img{
+	width: 100%;/*para que la imagen ocupe todo el ancho de pantalla*/
+	display: block;/*se cambia de tipo lineal a tipo bloque para que no hallan espacios entre ellos*/
+}
+
+#inicio .bloque-inicio{
+	position: absolute;/*la usamos ya que tenemos nuestro padre con relative y la usamos en absolute para poder poner el texto encima de una imagen y que floto mas no que giarde el espacio de antes*/
+	top: 30%; /*mueve el contenido de arriba hacia abajo en iuun 50 porciento*/
+	left: 50%; /*movemos el texto hacia la derecha un 50%*/
+	width: 400px; /*le damos un ancho al texto*/
+	text-align: center; /*centramos el texto con center*/
+	margin-left: -200px; /*usamos la margen izquuierda para retroceder y ajustar el texto bien centrado, truco*/
+}
+
+#inicio .bloque-inicio h1{
+	color: white;/*color blanco al h1 osea el titulo de la pagina*/
+	font-size: 35px;
+}
+
+#inicio .bloque-inicio p{
+	color: white;/*color blanco solo al parrafo del bloque inicio*/
+	font-size: 16px;
+}
+
+#nosotros{
+	background-image: url(img/latas.jpg); /*ponemos una imagen de fondo*/
+	background-size: cover; /*hacemos que la imagen ocupe todo el espacio que halla*/
+
+}
+
+#nosotros p{ /*aca toca especificar la p para darle color y tamañoal parrafo ya que antes habiamos puesto un color a todas las p*/
+	color: white;
+	text-align: center;
+	font-size: 16px;
+	/*margin: 0; aca se le margen 0 a todos los lados*/
+}
+
+#servicios .bloque-servicio{
+	border: 1px solid grey; /*borde de 1 px de grosor*/
+
+}
+
+#servicios .bloque-servicio .bloque-img-servicio img{
+	width: 100%; /*ocupa todo el ancho del div*/
+
+}
+
+#servicios .bloque-servicio .bloque-img-servicio.cuadrado-perfecto{
+	padding-bottom: 60%; /*espacio interno de abajo*/
+}
+
+#servicios .bloque-servicio .bloque-contenido-servicio{
+	padding: 15px; /*espacio en todos los lados de 15 px*/
+}
+
+#servicios .bloque-servicio .bloque-contenido-servicio h3{
+	margin-top: 0; /*pegado al techo o sin margenes*/
+	font-size: 25px; /*tamaño de la fuente o letra*/
+}
+
+#galeria{
+
+}
+
+#galeria h4{
+	padding-right: 15px; /*espacio interno derecho*/
+	padding-left: 15px; /*espacio interno izquierdo*/
+	text-align: center; /*aliniamos en el centro el texto*/
+	position: absolute; /*para que no ocupe espacio y se pueda poner sobre algo*/
+	top: 40%; /*margen o espacio de arriba hacia abajo de 40%*/
+	color: white; /*color de la letra blancxa*/
+	font-size: 18px; /*tamaño de la letra*/
+	width: 100%; /*tom todo el ancho del div y con esto ya se puede centrar el texto ya que se saabe que tamaño ahy*/
+}
+
+#galeria img{
+	filter: grayscale(1); /*cambia el color de las imagenes a blanco y negro, 1 es para ponerlo y 0 es como esta sin el filtro*/
+}
+
+#galeria .cuadrado-perfecto:hover img{ /*ese hover en img hace que cuando pongamos el mouse encima de la imagen se desactive la escala de grises*/
+	filter: grayscale(0); /*cambia el color de las imagenes a blanco y negro, 1 es para ponerlo y 0 es como esta sin el filtro*/
+}
+#galeria .cuadrado-perfecto:hover h4{ /*ese hover en img hace que cuando pongamos el mouse encima de la imagen se desactive la escala de grises*/
+	display: none;	/*para quitar la accion de este elemento ,osea la letra va adesaparecer*/
+}
+
+#contactenos{
+	position: relative; /*ocupa un espacio fijo*/
+
+}
+
+#contactenos iframe{
+	position: absolute; /*se usa para mover elementos y no ocupa un espacio al moverlos*/
+	top: 0; /*pegado a la amrgen de arriba*/
+	left: 0; /*pegado al lado izquierdo*/
+	width: 100%; /*ocupa todo el ancho*/
+	height: 100%; /*ocupa todo el largo*/
+	filter: grayscale(1); /*escala de grises*/
+}
+
+#contactenos form{
+	padding: 60px; /*espacio por dentro de 60px en todos los lados*/
+	background-color: red;
+	border-radius: 15px;
+}
+
+#contactenos form .form-block{
+	width: 100%;
+	margin-bottom: 15px; /*espacio en la parte de abajo para los inputs*/
+}
+
+#contactenos form .form-block .form-control{
+	display: block;
+	height: 40px;
+	font-size: 16px;
+	border: 1px solid grey;
+	width: 100%;
+	padding: 5px 10px;
+}
+
+#contactenos form .form-block textarea{
+	display: block;
+	height: 90px;
+	font-size: 16px;
+	border: 1px solid grey;
+	width: 100%;
+	padding: 5px 10px;
+}
+
+#contactenos form .form-block.bloque-ultimo{
+	margin-bottom: 0;
+	text-align: center;
+}
+
+@media(max-width: 767px){/*se usa para la vista de la pagina en celulares con hasta 767 de ancho*/
+	body{
+		font-size: 15px;
+	}
+	header .container nav{
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		background-color: white;
+		padding-top: 80px;
+		padding-bottom: 80px;
+		padding-right: 15px;
+		padding-left: 15px;
+		top: 0;
+		left: 0;
+		display:flex;
+		flex-direction: column; /*por defecto viene en row osea en fila, column es para covertirla en columna osea los elementos uno encima del otro algo asi como una lista*/
+		transition: all 0.4s ease; /*se usa para transiciones no tan bruscas como el de cuando se pone el pulsor en una imagen y cambie de color a blanco y negro pero aca se le pone tiempo y un tipo de transicion*/
+		transform: translateX(100%); /*translada al elemento fuera de la parte visible, osea lo oculta en base del eje x*/
+		
+	}
+
+	header .container nav.open{
+		transform: translateX(0); /*mueve el menu a la izquierda donde estaba antes*/
+	}
+
+	header .container nav a{
+		font-size: 30px;
+		margin: 15px 0; /*solo se le aplica margen arriba y abajo al a*/
+	}
+
+	header .container .hamb{
+		display: block; /*muestra en bloque*/
+		font-size: 40px;
+		color: red;
+		position: relative;/*los usamos para que sisempre muestre el icono del menu en mobile*/
+	}
+
+
+
+	form .boton.boton-negro{
+		width: 100%;
+	}
+
+	footer{
+		text-align: center;
+	}
+
+	footer .logo-footer{
+		width: 50%;
+	}
+
+	footer .redes {
+    justify-content: center;
+	}
+
+	.container{
+		width: 100%;
+	}
+
+	.columna-mobile-100{
+		width: 100%;
+	}
+
+	.columna-mobile-50{
+		width: 50%;
+	}
+
+	.empujar-mobile-0{
+		margin-left: 0;
+	}
+
+	.sinpadding-mobile{
+		padding: 0;
+
+	}
+
+	#inicio{
+		height: 100vh; /*usa el alto de todo el dispositivo con vh*/
+	}
+
+	#inicio img{ /*se usa de nuevo para ajustar la imagen*/
+		height: 100%; /*ocupa todo el alto*/
+		object-fit: cover; /*se usa solo para imagenes o videos y eel cover significa que ocupe todo el espacio del elemento*/
+		object-position: center; /*se usa para centrar el elemento, en este caso seria la imagen*/
+	}
+
+	#servicios .bloque-servicio{
+		margin-bottom: 15px;	
+	}
+
+	#contactenos{
+		padding: 0;
+	}
+
+	#contactenos iframe{
+		position: relative;
+		height: 50vh;
+	}
+
+	#contactenos form{
+		border-radius: 0;
+	}
+
+
+
+}
